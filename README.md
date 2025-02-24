@@ -15,7 +15,7 @@ git clone https://github.com/SeeDAO-OpenSource/seedao-online.git
 cd seedao-online
 ```
 
-安装依赖：
+安装依赖(当前npm是ok的，pnpm会报错，不支持)：
 
 ```bash
 npm install
