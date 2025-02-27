@@ -13,6 +13,13 @@
             "width": 1280,
             "x": 800,
             "y": 0
+        },
+        {
+            "fileName": "maps/node-consensus-conference.tmx",
+            "height": 1280,
+            "width": 2560,
+            "x": -2560,
+            "y": 0
         }
     ],
     "onlyShowAdjacentMaps": false,

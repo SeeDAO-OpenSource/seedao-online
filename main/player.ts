@@ -3,7 +3,7 @@ import CatEvent from './events/cat'
 
 const player: RpgPlayerHooks = {
     onConnected(player: RpgPlayer) {
-        player.name = '勇者'
+        player.name = '访客'
         player.level = 1
         player.setComponentsTop([
             // Components.text('L{level}',),

@@ -1,4 +1,4 @@
-name = 'My Game'
+name = 'SeeDAO Online'
 
 modules = [
     './main',
@@ -8,6 +8,6 @@ modules = [
 ]
 
 [start]
-    map = 'simplemap'
+    map = 'node-consensus-conference'
     graphic = 'hero'
     hitbox = [16, 16]
