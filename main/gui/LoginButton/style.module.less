@@ -1,0 +1,77 @@
+.ctn {
+  position: relative;
+  float: right;
+  z-index: 500;
+  border-radius: 10px;
+  width: 140px;
+  height: 46px;
+  margin-right: 80px;
+  margin-top: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  background-color: #5200ff;
+  cursor: pointer;
+  &:hover {
+    .dropdownCtn {
+      visibility: visible;
+    } 
+  }
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+  left: 2px;
+}
+
+.account {
+  margin-left: 10px;
+  cursor: pointer;
+} 
+
+.dropdownCtn {
+  position: absolute;
+  z-index: 500;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  top: 44px;
+  padding-top: 8px;
+  visibility: hidden;
+  white-space: nowrap;
+}
+
+.dropdown {
+  background-color: #15135d;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  & div {
+    cursor: pointer;
+    &:hover {
+      color: #f35caf;
+    }
+  }
+}
+
+.signOut {
+  background-color: #5200ff;
+  border-radius: 10px;
+  height: 42px;
+  line-height: 42px;
+  margin-top: 6px;
+  &:hover {
+    color: #fff !important;
+  }
+}
+ 

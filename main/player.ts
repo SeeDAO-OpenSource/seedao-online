@@ -9,8 +9,7 @@ const player: RpgPlayerHooks = {
             // Components.text('L{level}',),
             Components.text('{name}')], {
             marginLeft: 2,
-        })
-
+        }) 
     },
     onInput(player: RpgPlayer, { input }) {
         if (input == Control.Back) {
@@ -22,6 +21,16 @@ const player: RpgPlayerHooks = {
         if (player.getVariable('AFTER_INTRO')) {
             return
         }
+         // 登录
+         player.gui('login-button').open();
+    
+         player.on('walletConnected', ({ address }) => {
+            debugger
+           // Handle wallet connection on server side
+           player.setVariable('walletAddress', address);
+           // You can add additional logic here
+         });
+         
         // player.on("inputSubmitted", (name) => {
         //     player.showText(`你的名稱是：${name}`);
         // });

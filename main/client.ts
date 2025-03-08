@@ -1,8 +1,17 @@
-import { RpgClientEngineHooks, RpgClientEngine } from "@rpgjs/client";
-import { OPEN_WEB_PAGE } from "./consts/events";
+import { RpgClientEngineHooks, RpgClientEngine } from "@rpgjs/client"
+import { OPEN_WEB_PAGE } from "./consts/events"
+import wagmiConfig from "./config/wagmi"
+
+declare module '@rpgjs/client' {
+  interface RpgClientEngine {
+    wagmiConfig: typeof wagmiConfig
+  }
+}
 
 const client: RpgClientEngineHooks = {
-    onConnected(engine: RpgClientEngine, err: Error) {
+    onConnected(engine: RpgClientEngine) {
+      engine.wagmiConfig = wagmiConfig
+
         engine.socket.on(OPEN_WEB_PAGE, (data: { url: string }) => {
             window.open(data.url, "_blank");
         });
